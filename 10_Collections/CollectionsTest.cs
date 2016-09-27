@@ -70,7 +70,7 @@ namespace _10_Collections
         //* the ValueComparator sorts in *descending* order of value
         //* (most valuable comes first)
         //*/
-		/*
+		
         [TestMethod]
         public void CanCompareByValue()
         {
@@ -79,7 +79,7 @@ namespace _10_Collections
             Assert.AreEqual(0, comparator.Compare(stockIBM, stockIBM));
             Assert.IsTrue(comparator.Compare(stockYHOO, stockHP) < 0);
         }
-
+		
         [TestMethod]
         public void CanSortByValue()
         {
@@ -94,7 +94,7 @@ namespace _10_Collections
             Assert.AreEqual(stockIBM, stocks[2]);
             
         }
-
+		
         [TestMethod]
         [ExpectedException(typeof(NotSupportedException), "Unable to add an asset to the returned collection. Collection is ReadOnly")]
         public void CannotAddAssetToFacade()
@@ -106,6 +106,6 @@ namespace _10_Collections
             IList<Asset> assets = portfolio.GetAssets();
             assets.Add(stockYHOO);
         }
-		*/
+		
     }
 }

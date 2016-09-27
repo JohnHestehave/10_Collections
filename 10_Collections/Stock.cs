@@ -8,6 +8,7 @@ namespace _10_Collections
 {
 	public class Stock : Asset
 	{
+		public int Id;
 		public string Symbol;
 		public double PricePerShare;
 		public double NumShares;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,9 +34,10 @@ namespace _10_Collections
 		{
 			Stocks.Add(asset);
 		}
-		public List<Asset> GetAssets()
+		public IList<Asset> GetAssets()
 		{
-			return Stocks;
+			IReadOnlyList<Asset> assets = new ReadOnlyCollection<Asset>(Stocks);
+			return (IList<Asset>)assets;
 		}
 
 		public Asset GetAssetByName(string name)
@@ -67,5 +69,25 @@ namespace _10_Collections
 			
 			return newList;
 		}
+
+		public IList<Asset> GetAssetsSortedByValue()
+		{
+			Dictionary<double, Asset> assets = new Dictionary<double, Asset>();
+			foreach (Asset a in Stocks)
+			{
+				assets.Add(a.GetValue(), a);
+			}
+			List<double> sorter = new List<double>(assets.Keys);
+			sorter.Sort();
+			sorter.Reverse();
+			List<Asset> newList = new List<Asset>();
+			foreach (var item in sorter)
+			{
+				newList.Add(assets[item]);
+			}
+
+			return newList;
+		}
+		
 	}
 }

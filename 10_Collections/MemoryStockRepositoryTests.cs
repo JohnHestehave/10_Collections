@@ -11,7 +11,7 @@ namespace _10_Collections
     //The repository will later serve as a medium between our program and the database. This is called the repository pattern.
     //The tests automatically force you to create an interface which can be used in the next assignment
 
-	/*
+	
     [TestClass]
     public class MemoryStockRepositoryTests
     {
@@ -26,7 +26,7 @@ namespace _10_Collections
             hp.Id = 123;
             Assert.AreEqual(123, hp.Id);
         }
-
+		/*
         [TestMethod]
         public void FindNextId()
         {
@@ -37,7 +37,7 @@ namespace _10_Collections
             Assert.IsTrue(id2 != 0);
             Assert.IsTrue(id2 != id1);
         }
-
+		/*
         [TestMethod]
         public void CanSaveAndLoad()
         {
@@ -88,7 +88,7 @@ namespace _10_Collections
             Assert.AreEqual(0, stocks.Count);
         }
 
-        
+     */   
     }
-	*/
+	
 }

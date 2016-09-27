@@ -60,6 +60,7 @@
     <Compile Include="SavingsAccount.cs" />
     <Compile Include="Stock.cs" />
     <Compile Include="StockNameComparator.cs" />
+    <Compile Include="StockValueComparator.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
