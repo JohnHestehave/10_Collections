@@ -26,7 +26,7 @@ namespace _10_Collections
             hp.Id = 123;
             Assert.AreEqual(123, hp.Id);
         }
-		/*
+		
         [TestMethod]
         public void FindNextId()
         {
@@ -37,7 +37,7 @@ namespace _10_Collections
             Assert.IsTrue(id2 != 0);
             Assert.IsTrue(id2 != id1);
         }
-		/*
+		
         [TestMethod]
         public void CanSaveAndLoad()
         {
@@ -47,7 +47,7 @@ namespace _10_Collections
             Stock loaded = repository.LoadStock(id);
             Assert.AreEqual(yhoo, loaded);
         }
-
+		
         [TestMethod]
         public void CanSaveAfterChangeWithoutError()
         {
@@ -58,7 +58,7 @@ namespace _10_Collections
             Stock loaded = repository.LoadStock(yhoo.Id);
             Assert.AreEqual(120, loaded.NumShares);
         }
-
+		
         [TestMethod]
         public void CanFindAllStocks()
         {
@@ -75,7 +75,7 @@ namespace _10_Collections
             stocks = repository.FindAllStocks();
             Assert.AreEqual(2, stocks.Count);
         }
-
+		
         [TestMethod]
         public void CanClearRepository()
         {
@@ -88,7 +88,7 @@ namespace _10_Collections
             Assert.AreEqual(0, stocks.Count);
         }
 
-     */   
+       
     }
 	
 }
