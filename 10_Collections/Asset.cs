@@ -1,7 +1,8 @@
 ﻿namespace _10_Collections
 {
-	interface Asset
+	public interface Asset
 	{
 		double GetValue();
+		string GetName();
 	}
 }

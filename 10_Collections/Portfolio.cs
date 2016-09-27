@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _10_Collections
 {
-	class Portfolio
+	public class Portfolio
 	{
 		public List<Asset> Stocks = new List<Asset>();
 
@@ -31,6 +32,40 @@ namespace _10_Collections
 		public void AddAsset(Asset asset)
 		{
 			Stocks.Add(asset);
+		}
+		public List<Asset> GetAssets()
+		{
+			return Stocks;
+		}
+
+		public Asset GetAssetByName(string name)
+		{
+			foreach (Asset item in Stocks)
+			{
+				if (item.GetName() == name)
+				{
+					return item;
+				}
+			}
+			return null;
+		}
+
+		public IList<Asset> GetAssetsSortedByName()
+		{ 
+			Dictionary<string, Asset> assets = new Dictionary<string, Asset>();
+			foreach (Asset a in Stocks)
+			{
+				assets.Add(a.GetName(), a);
+			}
+			List<string> sorter = new List<string>(assets.Keys);
+			sorter.Sort();
+			List<Asset> newList = new List<Asset>();
+			foreach (var item in sorter)
+			{
+				newList.Add(assets[item]);
+			}
+			
+			return newList;
 		}
 	}
 }

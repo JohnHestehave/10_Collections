@@ -32,5 +32,10 @@ namespace _10_Collections
 			return Value;
 		}
 
+		public string GetName()
+		{
+			return AccountName;
+		}
+
 	}
 }

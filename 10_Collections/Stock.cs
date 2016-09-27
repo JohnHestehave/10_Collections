@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _10_Collections
 {
-	class Stock : Asset
+	public class Stock : Asset
 	{
 		public string Symbol;
 		public double PricePerShare;
@@ -58,6 +58,11 @@ namespace _10_Collections
 				return true;
 			}
 			return false;
+		}
+
+		public string GetName()
+		{
+			return Symbol;
 		}
 	}
 }
